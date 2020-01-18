@@ -1,4 +1,6 @@
-require "bitly/client/version"
+# frozen_string_literal: true
+
+require 'bitly/client/version'
 
 module Bitly
   module Client
