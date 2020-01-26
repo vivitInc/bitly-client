@@ -2,6 +2,7 @@
 
 require 'bitly/version'
 require 'bitly/config'
+require 'bitly/v4'
 
 module Bitly
   extend Config
