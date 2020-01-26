@@ -4,7 +4,7 @@ module Bitly
   # configuration module.
   module Config
     attr_accessor :api_version
-    attr_accessor :api_key
+    attr_accessor :access_token
 
     def configure
       yield self

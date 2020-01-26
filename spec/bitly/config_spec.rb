@@ -10,10 +10,10 @@ RSpec.describe Bitly::Config do
       expect(api_version).to eq '4'
     end
 
-    it 'has api_key attribute.' do
-      expect(api_key).to be_nil
-      api_key = 'some key'
-      expect(api_key).to eq 'some key'
+    it 'has access_token attribute.' do
+      expect(access_token).to be_nil
+      access_token = 'some token'
+      expect(access_token).to eq 'some token'
     end
   end
 
@@ -21,7 +21,7 @@ RSpec.describe Bitly::Config do
     subject do
       configure do |config|
         config.api_version = '4'
-        config.api_key = 'some key'
+        config.access_token = 'some token'
       end
     end
 
@@ -32,7 +32,7 @@ RSpec.describe Bitly::Config do
     it 'yield given block.' do
       subject
       expect(api_version).to eq '4'
-      expect(api_key).to eq 'some key'
+      expect(access_token).to eq 'some token'
     end
   end
 end
