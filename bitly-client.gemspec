@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'lib/bitly/client/version'
+require_relative 'lib/bitly/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'bitly-client'
-  spec.version       = Bitly::Client::VERSION
+  spec.version       = Bitly::VERSION
   spec.authors       = ['shimar']
   spec.email         = ['shima01dev@gmail.com']
 
