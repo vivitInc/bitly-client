@@ -7,6 +7,7 @@ end
 
 require 'bundler/setup'
 require 'bitly'
+require 'webmock/rspec'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -18,4 +19,7 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  # Real requests to network can be disabled
+  WebMock.disable_net_connect!
 end
