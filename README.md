@@ -1,8 +1,8 @@
-# Bitly::Client
+# bitly-client
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bitly/client`. To experiment with that code, run `bin/console` for an interactive prompt.
+bitly-client is a client library for [Bitly API](https://bitly.com).
 
-TODO: Delete this and the text above, and describe your gem
+Now support [V4 shorten API](https://dev.bitly.com/v4/) only.
 
 ## Installation
 
@@ -22,7 +22,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+Bitly.configure do |config|
+  config.api_version = 'v4'
+  config.access_token = 'your access_token provided by bitly'
+end
+
+bitlink = Bitly.shorten('https://www.google.com')
+bitlink.id #=> bit.ly/2Oh32A7
+bitlink.short_url #=> http://bit.ly/2Oh32A7
+bitlink.long_url #=> https://www.google.com
+```
+
+or
+
+```ruby
+client = Bitly::V4::Client.new('your access token')
+bitlink = client.shorten('https://www.google.com')
+bitlink.id #=> bit.ly/2Oh32A7
+bitlink.short_url #=> http://bit.ly/2Oh32A7
+bitlink.long_url #=> https://www.google.com
+```
 
 ## Development
 
