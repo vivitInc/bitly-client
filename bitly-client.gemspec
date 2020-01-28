@@ -6,11 +6,11 @@ Gem::Specification.new do |spec|
   spec.name          = 'bitly-client'
   spec.version       = Bitly::VERSION
   spec.authors       = ['shimar']
-  spec.email         = ['shima01dev@gmail.com']
+  spec.email         = ['dev@vivit.co.jp']
 
-  spec.summary       = 'a client library of bitly.'
-  spec.description   = 'a client library of bitly.'
-  spec.homepage      = 'https://github.com/shimar/bitly-client'
+  spec.summary       = 'Client library for Bitly API.'
+  spec.description   = 'Client library for Bitly API.'
+  spec.homepage      = 'https://github.com/vivitInc/bitly-client'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
 
